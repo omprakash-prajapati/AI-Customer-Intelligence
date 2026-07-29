@@ -18,17 +18,3 @@ def get_settings() -> Settings:
 @app.get("/health")
 async def health_check(settings: Annotated[Settings, Depends(get_settings)]):
     return {"status": "ok", "app_name": settings.app_name}
-
-"""
-Endpoint
-↓
-Prompt Builder
-↓
-Provider Layer
-↓
-OpenAI
-↓
-Validation
-↓
-Response
-"""

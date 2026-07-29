@@ -13,6 +13,11 @@ class Settings(BaseSettings):
     # Open AI key
     openai_api_key: str
 
+    # Google API Creds
+    google_api_key: str
+    google_project_name: str
+    google_project_number: str
+
     model_config = SettingsConfigDict(env_file=".env")
 
 settings = Settings()
