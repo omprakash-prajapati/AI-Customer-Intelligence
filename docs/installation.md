@@ -1,6 +1,6 @@
-```
 Recommended Stack
 ---
+```
 Python 3.14
 uv (package manager)
 FastAPI
@@ -28,7 +28,9 @@ cd fastapi-project
 ```
 
 3. Initialize the project
-```uv init``
+```
+uv init
+```
 
 This creates:
 
@@ -36,7 +38,8 @@ This creates:
 ├── pyproject.toml
 ├── .python-version
 ├── README.md
-└── src/```
+└── src/
+```
 
 4. Use Python 3.14
 ```
@@ -45,23 +48,29 @@ uv python pin 3.14
 ```
 
 5. Add Dependencies
-```uv add fastapi
+```
+uv add fastapi
 uv add "uvicorn[standard]"
 uv add sqlalchemy
 uv add "psycopg[binary]"
 uv add alembic
 uv add python-dotenv
-uv add pydantic-settings```
+uv add pydantic-settings
+```
 
 or all together:
 
-```uv add fastapi "uvicorn[standard]" sqlalchemy "psycopg[binary]" alembic python-dotenv pydantic-settings```
+```
+uv add fastapi "uvicorn[standard]" sqlalchemy "psycopg[binary]" alembic python-dotenv pydantic-settings
+```
 
 6. Create Dockerfile
 7. Create docker-compose.yml
 
 8. Run the Project
-```docker compose up -build```
+```
+docker compose up -build
+```
 
 9. Run Without Docker
 ```
