@@ -4,12 +4,13 @@ from fastapi import Depends, FastAPI
 
 from .config.settings import Settings
 from .config.exception_handlers import register_exception_handlers
-from .api import chat
+from .api import chat, semantic_search
 
 app = FastAPI()
 
 # Register routers
 app.include_router(chat.router)
+app.include_router(semantic_search.router)
 
 # Register exception handlers
 register_exception_handlers(app)

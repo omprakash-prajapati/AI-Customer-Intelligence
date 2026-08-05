@@ -1,4 +1,3 @@
-import logging
 from fastapi import APIRouter
 
 from app.models.chat import ChatRequest, ChatResponse
@@ -7,8 +6,6 @@ from app.schemas.feedback import FeedbackRequest, FeedbackResponse
 from app.dependencies import OpenAPIProviderDependency, settings_deps
 
 router = APIRouter()
-logger = logging.getLogger(__name__)
-
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest, provider: OpenAPIProviderDependency) -> ChatResponse:

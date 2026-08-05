@@ -27,6 +27,9 @@ class Settings(BaseSettings):
     # Configurations
     llm_timeout_seconds: int
     llm_max_retries: int
+    
+    embedding_provider_model_name: str
+    embedding_provider_dimension: int
 
     model_config = SettingsConfigDict(env_file=".env")
 
